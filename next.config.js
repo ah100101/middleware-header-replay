@@ -1,17 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  async headers() {
-    return [
-      {
-        source: '/header',
-        headers: [
-          {
-            key: 'host',
-            value: 'shop.middleware-header-replay.vercel.app',
-          },
-        ],
-      },
-    ]
-  },
-}
+const nextConfig = {}
 module.exports = nextConfig
