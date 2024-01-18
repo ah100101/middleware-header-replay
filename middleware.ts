@@ -9,6 +9,7 @@ export function middleware(request: NextRequest, response: Response) {
   const header = request.nextUrl.searchParams.get("h") ?? "";
   request.headers.set("x-vercel-header-request", header);
   request.headers.set("x-custom-header-ip", request.ip ?? "");
+  request.headers.set("host", "shop.middleware-header-replay.vercel.app");
 
   const responseHeaders = response.headers;
   console.log(JSON.stringify({ response }));
